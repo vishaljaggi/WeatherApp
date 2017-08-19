@@ -1,0 +1,14 @@
+table {
+  table-layout: fixed;
+  width: 80%;
+  border: 2px solid black;
+  text-align: center;
+}
+canvas{
+  background-color: white;
+}
+
+.chart {
+  width: 60%;
+  height: 40%;
+}

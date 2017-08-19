@@ -7,33 +7,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/app-styles.css" />
+
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
- 	<script src="js/script.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
 
-	<style>
-    #main-view {
-		  background-image: url("http://img.interia.pl/wiadomosci/nimg/s/d/Upalnie_slonecznie_ale_5748757.jpg");
-		  background-size: 100%;
-
-		}
-		table {
-		  table-layout: fixed;
-		  width: 80%;
-		  border: 2px solid black;
-		  text-align: center;
-		}
-		canvas{
-			background-color: white;
-		}
-	</style>
+	<script src="js/script.js"></script>
 
 </head>
 <body>
 <div data-role="page">
-	<div data-role="panel" id="mypanel">
+	<div data-role="panel" id="citySearchPanel">
 		<form class="ui-filterable">
 		    <input id="autocomplete-input" data-type="search" placeholder="Find a city...">
 		</form>
@@ -42,16 +28,16 @@
 		<ul id="history" data-role="listview" data-inset="true"></ul>
 	</div>
 	<div data-role="header" class="ui-nodisc-icon">
-	 <a href="#mypanel" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-b ui-btn-inline"> </a>
-		<h1>My Weather Forecast</h1>
+	 <a href="#citySearchPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-b ui-btn-inline"> </a>
+		<h1>Weather Forecast</h1>
 	</div>
 
 	<div role="main" class="ui-content" align="center" id="main-view">
 		<h1 id="city"></h1>
 		<img id="forecast" alt="forecast"><h2 id="condition"></h2>
 		<h1 id="temp"></h1>
-		<div style="width: 60%; height: 40%;">
-   	     	<canvas id="myChart"></canvas>
+		<div class="chart">
+ 	     	<canvas id="forecastChart"></canvas>
 		</div>
 		<br>
 		<table id = "table">

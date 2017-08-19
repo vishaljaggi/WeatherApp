@@ -21,7 +21,7 @@ $(document).on('pagecreate',function(){
 			$('.ui-content').show();
 		}
 
-	//Functions for getting geo locations
+		//Functions for getting geo locations
 		function showPosition(position){
 			let myLocation= {};
 			myLocation.lat = position.coords.latitude;
@@ -107,9 +107,9 @@ $(document).on('pagecreate',function(){
 			}
 
 			i = i+7;
-        }
+    }
         //Chart for next 7 hour intervals
-        let ctx = document.getElementById("myChart").getContext('2d');
+        let ctx = document.getElementById("forecastChart").getContext('2d');
         let myChart = new Chart(ctx, {
               type: 'line',
 	              data: {
@@ -120,15 +120,6 @@ $(document).on('pagecreate',function(){
 		                  data: [forecastList[0].main.temp, forecastList[1].main.temp,
 		                  forecastList[2].main.temp, forecastList[3].main.temp, forecastList[4].main.temp, forecastList[5].main.temp,
 		                   forecastList[6].main.temp, forecastList[7].main.temp],
-                        borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                        ],
 		                  borderWidth: 1,
 		                  fill: false
 		            	}]
