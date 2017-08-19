@@ -243,9 +243,13 @@ $(document).on('pagecreate',function(){
 			searchHistory.push(city);
 			// store the data
 			localStorage.setItem("history", JSON.stringify(searchHistory));
+
+			loadHistory();
 		}
 
 		function loadHistory(){
+			$('#history').text('');
+
 			$('#history').append(`<li> Recent Searches </li>`);
 
 			let preferred = JSON.parse(localStorage.getItem("history"));
