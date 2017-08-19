@@ -7,6 +7,10 @@
       {
         "city": "New York",
          "country":"USA"
+      },
+      {
+        "city": "Jalandhar",
+         "country":"India"
       }
    ]
 }

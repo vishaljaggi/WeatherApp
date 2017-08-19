@@ -244,6 +244,7 @@ $(document).on('pagecreate',function(){
 			// store the data
 			localStorage.setItem("history", JSON.stringify(searchHistory));
 
+			//reload list
 			loadHistory();
 		}
 
@@ -253,6 +254,7 @@ $(document).on('pagecreate',function(){
 			$('#history').append(`<li> Recent Searches </li>`);
 
 			let preferred = JSON.parse(localStorage.getItem("history"));
+
 			for (prefCity of preferred){
 				$('#history').append(`<li><a href="#" data-transition="slide">${prefCity.city}, ${prefCity.country}</a></li>`);
 			}
