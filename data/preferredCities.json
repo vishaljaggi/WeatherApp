@@ -1,0 +1,12 @@
+{
+   "preferred": [
+      {
+         "city": "Chicago",
+         "country":"USA"
+      },
+      {
+        "city": "New York",
+         "country":"USA"
+      }
+   ]
+}
