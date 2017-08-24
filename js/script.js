@@ -57,7 +57,7 @@ $(document).on('pagecreate',function(){
 		let icon = `http://openweathermap.org/img/w/${weather[0].icon}.png`;
 
 		$('#city').text(name);
-		$('#temp').text(main.temp);
+		$('#temp').text(main.temp.toFixed(1));
 		$('#temp').append(' &deg;C');
 		$("#forecast").attr('src', icon);
 		$('#condition').text(weather[0].description);
@@ -87,7 +87,7 @@ $(document).on('pagecreate',function(){
         for(forecast of forecastList){
         	let[date, time] = forecast.dt_txt.split(" ");
         	forecast.date = date;
-    		forecast.time = time;
+    			forecast.time = time;
         }
         // For Next 5 days
 
@@ -100,7 +100,7 @@ $(document).on('pagecreate',function(){
 				let image = $('<img></img>').attr("src",icon);
 
 				$("#heading").append('<th>'+forecastList[i].date+'</th>');
-				var temperature = $('<td></td>').append(data.list[i].main.temp,'&deg;C');
+				var temperature = $('<td></td>').append(data.list[i].main.temp.toFixed(1),'&deg;C');
 				$("#row").append(temperature);
 				$("#descrip").append('<td>'+forecastList[0].weather[0].description+'</td>');
 				$('<td></td>').html(image).appendTo("#img");
@@ -117,9 +117,9 @@ $(document).on('pagecreate',function(){
 	                  forecastList[3].time,forecastList[4].time,forecastList[5].time,forecastList[6].time],
 		                datasets: [{
 		                  label: 'Temperature in Celsius',
-		                  data: [forecastList[0].main.temp, forecastList[1].main.temp,
-		                  forecastList[2].main.temp, forecastList[3].main.temp, forecastList[4].main.temp, forecastList[5].main.temp,
-		                   forecastList[6].main.temp, forecastList[7].main.temp],
+		                  data: [forecastList[0].main.temp.toFixed(1), forecastList[1].main.temp.toFixed(1),
+		                  forecastList[2].main.temp.toFixed(1), forecastList[3].main.temp.toFixed(1), forecastList[4].main.temp.toFixed(1), forecastList[5].main.temp.toFixed(1),
+		                   forecastList[6].main.temp.toFixed(1), forecastList[7].main.temp.toFixed(1)],
 		                  borderWidth: 1,
 		                  fill: false
 		            	}]

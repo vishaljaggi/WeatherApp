@@ -14,13 +14,18 @@
   float:right;
   width: 50%;
   height: 50%;
-  background-color: white;
 }
 
 .city{
   font-family: sans-serif;
-  font-size: xx-large;
+  font-size: x-large;
 }
+
+.main {
+  background-color: #e6e6e6;
+  font-weight: lighter;
+}
+
 /** Clear fix **/
 
 .group:before,
