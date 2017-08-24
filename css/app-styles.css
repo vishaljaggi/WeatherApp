@@ -1,14 +1,36 @@
-table {
-  table-layout: fixed;
-  width: 80%;
-  border: 2px solid black;
+.forecast {
+  width: 100%;
+  border: 1px solid;
   text-align: center;
 }
-canvas{
-  background-color: white;
+
+.details {
+  width: 50%;
+  text-align: center;
+  font: 1.2em "Open Sans", sans-serif;
 }
 
 .chart {
-  width: 60%;
-  height: 40%;
+  float:right;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
+
+.city{
+  font-family: sans-serif;
+  font-size: xx-large;
+}
+/** Clear fix **/
+
+.group:before,
+.group:after {
+ content: "";
+ display: table;
+}
+.group:after {
+ clear: both;
+}
+.group {
+ zoom: 1;
 }

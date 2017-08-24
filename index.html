@@ -28,19 +28,23 @@
 		<ul id="history" data-role="listview" data-inset="true"></ul>
 	</div>
 	<div data-role="header" class="ui-nodisc-icon">
-	 <a href="#citySearchPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-b ui-btn-inline"> </a>
+	 	<a href="#citySearchPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-b ui-btn-inline"> </a>
 		<h1>Weather Forecast</h1>
 	</div>
 
-	<div role="main" class="ui-content" align="center" id="main-view">
-		<h1 id="city"></h1>
-		<img id="forecast" alt="forecast"><h2 id="condition"></h2>
-		<h1 id="temp"></h1>
-		<div class="chart">
+	<div role="main" class="ui-content" id="main-view">
+		<div class="group">
+			<div class="chart">
  	     	<canvas id="forecastChart"></canvas>
+			</div>
+			<div class="details">
+				<span class="city" id="city"></span>
+				<h1 id="temp"></h1>
+				<img id="forecast" alt="forecast"><p id="condition"></p>
+			</div>
 		</div>
 		<br>
-		<table id = "table">
+		<table class="forecast" id ="table">
 		    <tr id="heading"></tr>
 		    <tr id="row"></tr>
 		    <tr id="descrip"></tr>
